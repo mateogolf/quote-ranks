@@ -7,9 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   //import from quote-new
-  quotes = [];
+  myQuotes = [];
   addQuote(eventData){
-    let newQuote=eventData;
-    this.quotes.push(eventData);
+    this.myQuotes.push(eventData);
   }
 }

@@ -13,13 +13,18 @@ export class QuoteListComponent implements OnInit,OnChanges {
     this.quotes = changes.quotes.currentValue;
   }
   voteUp(idx){
-    this.quotes[idx]+=1;
+    this.quotes[idx].vote+=1;
+    this.sort();
   }
   voteDown(idx) {
-    this.quotes[idx] -= 1;
+    this.quotes[idx].vote -= 1;
+    this.sort();
   }
   delete(idx){
     console.log("Placeholder for removal")
+  }
+  sort(){
+    
   }
   ngOnInit() {
   }
