@@ -2,21 +2,21 @@
 <form (submit)="onSubmit()" #myform='ngForm'>
   <div id="input">
     <textarea 
-    name="quote" 
-    id="quote" 
-    cols="40" 
-    rows="20"
+    name="content" 
+    id="content" 
+    cols="70" 
+    rows="10"
     required
     minlength="4"
-    [(ngModel)]="user.quote"
-    #quote='ngModel'
+    [(ngModel)]="quote.content"
+    #content='ngModel'
     ></textarea>
     <p> Author: <input 
       name="author"
       type="text"
       required
       minlength="1"
-      [(ngModel)]="user.author"
+      [(ngModel)]="quote.author"
       #author='ngModel'
       >
     </p>
@@ -24,7 +24,7 @@
   </div>
   <div>
     <!-- If quote is not null, show Quote is required -->
-    <p *ngIf="quote.errors" class="red">Quote is Required</p>
+    <p *ngIf="content.errors" class="red">Quote is Required</p>
     <p *ngIf="author.errors" class="red">Author is Required</p>
   </div>
 </form>
